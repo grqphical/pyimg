@@ -2,10 +2,11 @@
 import argparse
 from .transform import *
 from .filters import *
+from .adjustments import *
 from plugins import BasePlugin
 
 # Create a list of all active classes that our program can use
-valid_classes = {"transform" : Transform, "filters" : Filters}
+valid_classes = {"transform" : Transform, "filters" : Filters, "adjustments" : Adjustments}
 
 # Setup our parser
 parser = argparse.ArgumentParser(prog="pyimg")

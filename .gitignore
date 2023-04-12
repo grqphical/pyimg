@@ -1,1 +1,3 @@
 __pycache__
+# Remove any images used for testing
+*.png
