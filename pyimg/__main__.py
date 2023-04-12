@@ -28,6 +28,11 @@ def main():
     method = getattr(active_class, args.action)
     new_image = method(image, *args.args)
 
+    # If user specified an output file write to that
+    if args.output:
+        new_image.save(args.output)
+        return
+
     # Save the image at the end
     new_image.save(args.image_file)
 

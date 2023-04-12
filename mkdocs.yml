@@ -31,4 +31,5 @@ theme:
 
 nav:
   - Home: index.md
+  - Usage: usage.md
   - Transform: transform.md

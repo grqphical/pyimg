@@ -12,6 +12,7 @@ valid_classes = {"transform" : Transform, "filters" : Filters, "adjustments" : A
 parser = argparse.ArgumentParser(prog="pyimg")
 parser.add_argument("image_file")
 parser.add_argument("-s", "--stats", action="store_true", help="Whether or not to show image stats when running")
+parser.add_argument("-o", "--output", help="Optional file to output to")
 subparsers = parser.add_subparsers(dest='target_class')
 
 # Load all plugins
