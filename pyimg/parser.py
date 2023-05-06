@@ -3,10 +3,36 @@ import argparse
 from .transform import *
 from .filters import *
 from .adjustments import *
+from .operations import *
 from plugins import BasePlugin
 
+def convert_types(arg):
+    """Converts a string into a python type"""
+
+    if arg == "None":
+        return None
+
+    # Integer
+    try:
+        i = int(arg)
+        return i
+    except:
+        pass
+    # Float
+    try:
+        i = float(arg)
+        return i
+    except:
+        pass
+    # Bool
+    try:
+        i = bool(arg)
+        return i
+    except:
+        pass
+
 # Create a list of all active classes that our program can use
-valid_classes = {"transform" : Transform, "filters" : Filters, "adjustments" : Adjustments}
+valid_classes = {"transform" : Transform, "filters" : Filters, "adjustments" : Adjustments, "operations" : Operations}
 
 # Setup our parser
 parser = argparse.ArgumentParser(prog="pyimg")
@@ -25,4 +51,4 @@ for name, obj in valid_classes.items():
     subparser = subparsers.add_parser(name)
     subparser.add_argument("action", choices=[func for func in dir(obj) if callable(getattr(obj, func)) and not func.startswith("__")], 
                         help="What method you wish to use")
-    subparser.add_argument("args", nargs="*", help="arguments for the function. Check the docs for more info")
+    subparser.add_argument("args", nargs="*", help="arguments for the function. Check the docs for more info", type=convert_types)

@@ -36,3 +36,5 @@ nav:
   - Home: index.md
   - Usage: usage.md
   - Transform: transform.md
+  - Filters: filters.md
+  - Operations: operations.md

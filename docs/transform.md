@@ -31,7 +31,7 @@ Scales an image based on a given width and height
 $ python -m pyimg example.png transform resize 1024 1024
 ```
 
-### Flips
+### Flip
 
 Flips an image on either the *horizontal* or *vertical* axes
 
