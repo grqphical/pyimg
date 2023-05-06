@@ -22,7 +22,7 @@ $ python -m pyimg IMAGE_FILE transform METHOD foo bar
 
 ## Docs
 
-WIP. There is some help messages in the app currently you can use --help on any command to learn more
+To view docs first install mkdocs with ```pip``` or ```conda``` then run ```python -m mkdocs serve```
 
 ## Plugins
 

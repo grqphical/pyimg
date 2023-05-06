@@ -1,6 +1,7 @@
 site_name: pyimg Documentation
 repo_name: 'pyimg'
 repo_url: https://github.com/grqphical07/pyimg
+site_url: ""
 
 theme:
   name: material
