@@ -4,7 +4,7 @@ I made this to help with the workflow of quickly cropping and enhancing images
 
 ## How to use
 
-pyimg has two built in submodules **Transform** and **Filters**. To use the transform submodule just run the command:
+pyimg has built in submodules such as **Transform**, **Operations**, **Adjustments** and **Filters**. To use the transform submodule just run the command:
 ```bash
 $ python -m pyimg IMAGE_FILE transform METHOD 
 ```
